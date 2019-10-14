@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 id="hi">test</h1>
+<div name ="clinic" id="cc1">
+    <input typeof="text" name="clinicAge" id="c1" value=1>
+</div>
+<div name ="clinic" id="cc2">
+    <input typeof="text" name="clinicAge" id="c2" value=1>
+</div>
+
+<button onclick="test()">Try it</button>
+<script>
+    function test() {
+
+        var x = document.getElementsByName("clinic").length;
+          document.getElementById("hi").innerHTML = x;
+        for (var i = 0; i < x.length; i++) {
+            var y = document.getElementById("c" + i.toString()).value;
+                document.getElementById("hi").innerHTML = y;
+        }
+
+    }
+
+</script>
